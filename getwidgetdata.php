@@ -2,6 +2,8 @@
 
 //  get widget data
 //  add this snippet to your functions.php
+//  modified from this script:
+//  https://gist.github.com/kingkool68/3418186
 
 function get_widget_data( $sidebar_name ) {
 	global $wp_registered_sidebars, $wp_registered_widgets;
