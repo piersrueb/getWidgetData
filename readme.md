@@ -1,4 +1,4 @@
-## Get Widget Data
+### Get Widget Data
 
 Get raw data from standard Wordpress widget instances.
 
