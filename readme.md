@@ -1,31 +1,15 @@
-## Simple Parallax
+## Get Widget Data
 
-Simple fixed background parallax effect in vanilla js.
+Get raw data from standard Wordpress widget instances.
 
-See [demo](https://codepen.io/Rueb/pen/rZbZgj) on Codepen.
+#### Usage
 
-####  JS
-
-Initialise the plugin. The first argument identifies the parrallax class.
-
-The second is the modifier it controls the parallax distance. It is defined as a fraction of the total page height and is used to animate the background image position on scroll.
-
-```js
-simpleParallax('para',8);
-```
-
-#### HTML
-
-```html
-<section class="para" id="parallax-1"></section>
-```
-
-#### CSS
-
-```css
-#parallax-1{
-    background-image: url('../img/myimage.jpg');
-    height: 400px;
-    width: 100%;
+```php
+if ( is_active_sidebar( 'homepage_hero_banner' ) ){
+    $widgetData = get_widget_data('Homepage hero banner');
+    foreach($widgetData as $data){
+        $imgUrl = $data->url;
+        echo '<div class="banner" style="background-image: url('.$imgUrl.');"></div>';
+    }
 }
 ```
